@@ -117,7 +117,66 @@ tbody tr:hover td{background:#fff3e6;}
   html{-webkit-print-color-adjust:exact;}
   [contenteditable]:hover,[contenteditable]:focus{background:transparent!important;box-shadow:none!important;}
 }
-@media(max-width:580px){.doc-title{font-size:15px;}table{font-size:11px;}td,th{padding:4px 7px;}.det-row,.guide-inner{padding:8px 12px;}}
+@media(max-width:640px){
+  /* Doc wrapper */
+  #doc{margin:0;border-radius:0;border-top:2px solid #FF6B00;}
+
+  /* Toolbar */
+  .toolbar{padding:7px 10px;gap:5px;}
+  .tbtn{padding:5px 10px;font-size:11px;}
+  .toolbar-hint{display:none;}
+
+  /* Header */
+  .doc-hdr{padding:10px 12px;}
+  .logo-area img{max-height:38px;max-width:110px;}
+  .doc-title{font-size:13px;letter-spacing:.2px;}
+  #doc > .doc-hdr > div:last-child{display:none;}
+
+  /* Info block — stack into 2 columns */
+  .info-block{padding:6px 10px 4px;}
+  .info-table{display:block;}
+  .info-table tbody{display:grid;grid-template-columns:1fr 1fr;gap:0;}
+  .info-table tr{display:contents;}
+  .info-table td{display:block;padding:3px 5px;font-size:11px;overflow-wrap:break-word;word-break:break-word;}
+  .info-lbl{white-space:normal;width:auto;}
+
+  /* Section headers */
+  .sec-hdr{font-size:10px;padding:5px 10px;}
+
+  /* Tables — horizontal scroll container */
+  .tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  table{font-size:10.5px;min-width:480px;}
+  thead th{padding:5px 7px;font-size:10px;}
+  tbody td{padding:4px 7px;}
+
+  /* Itinerary table narrower */
+  .itin-table{min-width:380px;}
+
+  /* Add row buttons */
+  .add-row-btn{font-size:10px;padding:4px 8px;margin:4px 8px;width:calc(100% - 16px);}
+
+  /* Det row */
+  .det-row{padding:8px 12px;gap:12px;}
+  .det-item{min-width:110px;flex:1 1 110px;}
+  .det-lbl{font-size:9.5px;}
+  .det-val{font-size:11.5px;}
+
+  /* Guide / Driver */
+  .guide-inner{padding:10px 12px;gap:12px;}
+  .guide-avatar-empty,.guide-avatar-empty{width:64px;height:64px;}
+  #guideAvatarImg,#driverAvatarImg{width:64px!important;height:64px!important;}
+  .guide-fields{gap:10px 14px;}
+
+  /* Rooming */
+  .room-card{margin:6px 10px;}
+  .room-card-hdr{padding:5px 10px;font-size:11px;}
+  .room-field{flex:1 1 130px;padding:5px 10px;font-size:11px;}
+  .room-field-lbl{font-size:9px;}
+
+  /* Footer */
+  .doc-footer{padding:10px 12px;gap:12px;}
+  .foot-name{font-size:11px;}
+}
 </style>
 </head>
 <body>
